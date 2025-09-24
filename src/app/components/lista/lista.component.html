@@ -1,0 +1,27 @@
+<table>
+    <tr>
+        <th>id</th>
+        <th>usuario</th>
+        <th>email</th>
+        <th>fecha de alta</th>
+        <th>acciones</th>
+    </tr>
+    
+    <tr *ngFor="let usuario of usuarios">
+        <td>{{ usuario.id }}</td>
+        <td>{{ usuario.nombre }}</td>
+        <td>{{ usuario.email }}</td>
+        <td>{{ usuario.fecha_alta }}</td>
+        <td>
+            <div class="flex flex-wrap gap-4 justify-center">
+              <p-button
+                icon="pi pi-trash"
+                severity="danger"
+                (click)="confirmDelete(usuario.id)"
+                aria-label="Delete"
+              />
+            </div>
+        </td>
+    </tr>
+    
+    </table>

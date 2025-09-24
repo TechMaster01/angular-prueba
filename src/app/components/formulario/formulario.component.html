@@ -1,0 +1,15 @@
+<div class="formulario">
+    <form>
+      <input class="inputs" type="text" placeholder="Ingresa el nombre" [(ngModel)]="nombre" name="nombre">
+      
+      <input class="inputs" type="email" placeholder="Ingrese su email" [(ngModel)]="email" name="email">
+      
+      <input 
+        class="button" 
+        type="button" 
+        value="enviar" 
+        (click)="guardarUsuario()"
+        [disabled]="isSaving"
+      >
+    </form>
+</div>
