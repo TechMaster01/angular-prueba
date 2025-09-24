@@ -14,14 +14,19 @@
         <td>{{ usuario.fecha_alta }}</td>
         <td>
             <div class="flex flex-wrap gap-4 justify-center">
-              <p-button
-                class="btn btn-danger"
-                icon="pi pi-trash"
-                (click)="confirmDelete(usuario.id)"
-                aria-label="Delete"
-              />
+                <p-button
+                    class="btn btn-info"
+                    icon="pi pi-pencil"
+                    severity="info"
+                    aria-label="Editar"
+                />
+                <p-button
+                    class="btn btn-danger"
+                    icon="pi pi-trash"
+                    (click)="confirmDelete(usuario.id)"
+                    aria-label="Delete"
+                />
             </div>
         </td>
-    </tr>
-    
-    </table>
+    </tr>    
+</table>
